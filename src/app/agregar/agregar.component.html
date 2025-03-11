@@ -1,0 +1,94 @@
+<div
+  id="accordion-arrow-icon"
+  data-accordion="open"
+  class="mx-auto"
+  style="max-width: 800px"
+>
+  <h2 id="accordion-arrow-icon-heading-1">
+    <button
+      type="button"
+      class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+      data-accordion-target="#accordion-arrow-icon-body-1"
+      aria-expanded="true"
+      aria-controls="accordion-arrow-icon-body-1"
+    >
+      <span>Proyecto Nuevo</span>
+    </button>
+  </h2>
+  <div
+    id="accordion-arrow-icon-body-1"
+    aria-labelledby="accordion-arrow-icon-heading-1"
+  >
+    <div
+      class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+    >
+      <p class="mb-2 text-gray-500 dark:text-gray-400">
+        Ingresa los detalles del nuevo proyecto para iniciar la planificasion
+        del trabajo.
+      </p>
+    </div>
+  </div>
+
+  <div
+    id="accordion-arrow-icon-body-2"
+    class="active"
+    aria-labelledby="accordion-arrow-icon-heading-2"
+  >
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <form class="max-w-sm mx-auto" [formGroup]="projectForm" (ngSubmit)="onSubmit()" >
+        <div class="mb-5">
+          <label
+            for="username-success"
+            class="block mb-2 text-sm font-medium text-black-700 dark:text-black-500"
+            >Nombre del proyecto</label
+          >
+            <input
+            formControlName="nombre"
+            type="text"
+            id="username-success"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Ingresa el nombre del proyecto"
+          />
+          
+
+          
+         
+        </div>
+        <div>
+          <label
+            for="username-error"
+            class="block mb-2 text-sm font-medium text-black-700 dark:text-black-500"
+            >Descripcion</label
+          >
+         
+          <textarea
+            formControlName="descripcion"
+            id="message"
+            rows="4"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Describa el alcance y propocito del proyecto"
+          ></textarea>
+
+         
+
+          
+          
+        </div>
+
+        <button
+          type="submit"
+          class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        >
+          Guardar Proyecto
+        </button>
+        <button
+          type="button"
+          
+          class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          Cancelar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
