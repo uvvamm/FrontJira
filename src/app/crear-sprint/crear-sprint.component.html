@@ -36,31 +36,34 @@
     aria-labelledby="accordion-arrow-icon-heading-2"
   >
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-      <form class="max-w-sm mx-auto" [formGroup]="sprintsForm" (ngSubmit)="onSubmit()">
+      <form
+        class="max-w-sm mx-auto"
+        [formGroup]="sprintsForm"
+        (ngSubmit)="onSubmit()"
+      >
         <div class="mb-5">
           <label
             for="username-success"
-            class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500"
+            class="block mb-2 text-sm font-medium text-black-700 dark:text-black-500"
             >Nombre del sprint *</label
           >
           <input
-          formControlName="nombre"
+            formControlName="nombre"
             type="text"
             id="username-success"
-            class="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
+            class="bg-gray-50 border border-gray-500 text-gray-900 dark:text-gray-400 placeholder-gray-700 dark:placeholder-gray-500 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-500"
             placeholder="ingresa el nombre del sprint"
           />
-          <p class="mt-2 text-sm text-green-600 dark:text-green-500">
-            <span class="font-medium">Alright!</span> Username available!
-          </p>
+          <div *ngIf="sprintsForm.get('nombre')?.invalid && sprintsForm.get('nombre')?.touched" class="text-red-500 text-sm mt-1">
+            El nombre del sprint es obligatorio.
+          </div>
         </div>
         <div>
           <label
             for="username-error"
-            class="block mb-2 text-sm font-medium text-red-700 dark:text-red-500"
-            >Periodo de sprint</label
+            class="block mb-2 text-sm font-medium text-black-700 dark:text-black-500"
+            >Periodo de sprint *</label
           >
-          
 
           <div
             id="date-range-picker"
@@ -84,7 +87,7 @@
                 </svg>
               </div>
               <input
-              formControlName="fechaInicio"
+                formControlName="fechaInicio"
                 id="datepicker-range-start"
                 name="start"
                 type="text"
@@ -110,7 +113,7 @@
                 </svg>
               </div>
               <input
-              formControlName="fechaFinal"
+                formControlName="fechaFinal"
                 id="datepicker-range-end"
                 name="end"
                 type="text"
@@ -119,23 +122,32 @@
               />
             </div>
           </div>
-          <p class="mt-2 text-sm text-red-600 dark:text-red-500">
-            <span class="font-medium">Oops!</span> Username already taken!
-          </p>
+          <div *ngIf="sprintsForm.get('fechaInicio')?.invalid && sprintsForm.get('fechaInicio')?.touched" class="text-red-500 text-sm mt-1">
+            La fecha de inicio es obligatoria.
+          </div>
+          <div *ngIf="sprintsForm.get('fechaFinal')?.invalid && sprintsForm.get('fechaFinal')?.touched" class="text-red-500 text-sm mt-1">
+            La fecha de final es obligatoria.
+          </div>
+          <div *ngIf="sprintsForm.errors?.['dateRangeInvalid']" class="text-red-500 text-sm mt-1">
+            La fecha de final debe ser posterior a la fecha de inicio.
+          </div>
         </div>
 
-        <button
-          type="submit"
-          class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-        >
-          Guardar Sprint
-        </button>
-        <button
-          type="button"
-          class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-        >
-          Cancelar
-        </button>
+        <div class="mt-5">
+          <button
+            type="submit"
+            class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          >
+            Guardar Sprint
+          </button>
+          <button
+            type="button" 
+            (click)="goHome()"
+            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+          >
+            Cancelar
+          </button>
+        </div>
       </form>
     </div>
   </div>

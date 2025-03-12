@@ -35,24 +35,27 @@
     aria-labelledby="accordion-arrow-icon-heading-2"
   >
     <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-      <form class="max-w-sm mx-auto" [formGroup]="projectForm" (ngSubmit)="onSubmit()" >
+      <form
+        class="max-w-sm mx-auto"
+        [formGroup]="projectForm"
+        (ngSubmit)="onSubmit()"
+      >
         <div class="mb-5">
           <label
             for="username-success"
             class="block mb-2 text-sm font-medium text-black-700 dark:text-black-500"
             >Nombre del proyecto</label
           >
-            <input
+          <input
             formControlName="nombre"
             type="text"
             id="username-success"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Ingresa el nombre del proyecto"
           />
-          
-
-          
-         
+          <div *ngIf="projectForm.get('nombre')?.invalid && projectForm.get('nombre')?.touched" class="text-red-500 text-sm mt-1">
+            El nombre del proyecto es obligatorio.
+          </div>
         </div>
         <div>
           <label
@@ -60,7 +63,7 @@
             class="block mb-2 text-sm font-medium text-black-700 dark:text-black-500"
             >Descripcion</label
           >
-         
+
           <textarea
             formControlName="descripcion"
             id="message"
@@ -68,11 +71,9 @@
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Describa el alcance y propocito del proyecto"
           ></textarea>
-
-         
-
-          
-          
+          <div *ngIf="projectForm.get('descripcion')?.invalid && projectForm.get('descripcion')?.touched" class="text-red-500 text-sm mt-1">
+            La descripción del proyecto es obligatoria.
+          </div>
         </div>
 
         <button
@@ -83,8 +84,8 @@
         </button>
         <button
           type="button"
-          
           class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+          (click)="redirectToHome()"
         >
           Cancelar
         </button>

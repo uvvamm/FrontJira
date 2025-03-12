@@ -41,6 +41,7 @@ export class CrearItemComponent implements OnInit {
           (response) => {
             console.log('Respuesta del servidor:', response);
             alert('Proyecto creado con éxito');
+            this.goBack();
           },
           (error) => {
             console.error('Error al crear el proyecto:', error);
@@ -51,6 +52,10 @@ export class CrearItemComponent implements OnInit {
         console.log('Formulario no válido');
         alert('Por favor, completa todos los campos.');
       }
+    }
+
+    goBack() {
+      window.history.back();
     }
 }
 

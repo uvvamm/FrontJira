@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProyectosService } from '../ProyectoService/proyectos.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-agregar',
@@ -28,6 +29,7 @@ export class AgregarComponent {
         (response) => {
           console.log('Respuesta del servidor:', response);
           alert('Proyecto creado con éxito');
+          this.redirectToHome()
         },
         (error) => {
           console.error('Error al crear el proyecto:', error);
@@ -38,5 +40,9 @@ export class AgregarComponent {
       console.log('Formulario no válido');
       alert('Por favor, completa todos los campos.');
     }
+  }
+
+  redirectToHome() {
+    window.location.href = '/';
   }
 }

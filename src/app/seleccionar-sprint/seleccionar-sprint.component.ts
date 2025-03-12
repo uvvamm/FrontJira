@@ -72,6 +72,8 @@ export class SeleccionarSprintComponent implements OnInit {
       response => {
         console.log('Sprint actualizado correctamente', response);
         alert('El sprint ha sido actualizado con éxito.');
+        //go back
+        this.goBack();
       },
       error => {
         console.error('Error al actualizar el sprint', error);
@@ -79,7 +81,10 @@ export class SeleccionarSprintComponent implements OnInit {
       }
     );
   }
-  }
+  goBack() {
+    window.history.back();
+
+  }}
 
 
 

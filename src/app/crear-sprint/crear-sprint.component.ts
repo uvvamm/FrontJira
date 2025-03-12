@@ -48,4 +48,8 @@ export class CrearSprintComponent implements OnInit {
       alert('Por favor, completa todos los campos.');
     }
   }
+
+  goHome() {
+    window.history.back();
+  }
 }
