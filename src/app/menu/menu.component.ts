@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { ProyectosService } from '../ProyectoService/proyectos.service';
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-menu',
   standalone: false,
@@ -8,7 +9,7 @@ import { ProyectosService } from '../ProyectoService/proyectos.service';
 })
 export class MenuComponent implements OnInit {
   projects: any[] = [];
-  constructor(private projectService: ProyectosService) { }
+  constructor(private projectService: ProyectosService,private router: Router) { }
 
   ngOnInit(): void {
     this.getProjects();
@@ -24,5 +25,16 @@ export class MenuComponent implements OnInit {
       }
     );
   }
+
+  verSprints(proyecto: string): void {
+    console.log('verSprints', proyecto);
+    this.router.navigate(['/lista-sprints', proyecto]);
+  }
+
+  productBacklog(proyecto: string): void {
+    this.router.navigate(['/lista-product-backlog', proyecto]);
+  }
+
+  
 
 }

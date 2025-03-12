@@ -1,62 +1,142 @@
-
-<div id="accordion-arrow-icon" data-accordion="open" class="mx-auto" style="max-width: 800px;">
-    <h2 id="accordion-arrow-icon-heading-1">
-      <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-arrow-icon-body-1" aria-expanded="true" aria-controls="accordion-arrow-icon-body-1">
-        <span>Nuevo Sprint</span>
-      </button>
-    </h2>
-    <div id="accordion-arrow-icon-body-1" aria-labelledby="accordion-arrow-icon-heading-1">
-      <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-          <h5 class="text-xl font-bold dark:text-white">Crear Nuevo Sprint</h5>  
-          <p class="mb-2 text-gray-500 dark:text-gray-400">Ingresa los detalles del nuevo proyecto para iniciar la planificasion el trabajo del equipo.</p>
-
-      </div>
-  
-      
+<div
+  id="accordion-arrow-icon"
+  data-accordion="open"
+  class="mx-auto"
+  style="max-width: 800px"
+>
+  <h2 id="accordion-arrow-icon-heading-1">
+    <button
+      type="button"
+      class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 bg-gray-100 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+      data-accordion-target="#accordion-arrow-icon-body-1"
+      aria-expanded="true"
+      aria-controls="accordion-arrow-icon-body-1"
+    >
+      <span>Nuevo Sprint</span>
+    </button>
+  </h2>
+  <div
+    id="accordion-arrow-icon-body-1"
+    aria-labelledby="accordion-arrow-icon-heading-1"
+  >
+    <div
+      class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+    >
+      <h5 class="text-xl font-bold dark:text-white">Crear Nuevo Sprint</h5>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">
+        Ingresa los detalles del nuevo sprint para iniciar la planificasion el
+        trabajo del equipo.
+      </p>
     </div>
-    
-   
-    <div id="accordion-arrow-icon-body-2" class="active" aria-labelledby="accordion-arrow-icon-heading-2">
-      <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-        <form class="max-w-sm mx-auto">
-          <div class="mb-5">
-            <label for="username-success" class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500">Nombre del sprint *</label>
-            <input type="text" id="username-success" class="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500" placeholder="ingresa el nombre del sprint">
-            <p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Alright!</span> Username available!</p>
-          </div>
-          <div>
-            <label for="username-error" class="block mb-2 text-sm font-medium text-red-700 dark:text-red-500">Periodo de sprint</label>
-            <input type="text" id="username-error" class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500" placeholder="Bonnie Green">
-
-            <div id="date-range-picker" date-rangepicker class="flex items-center">
-                <div class="relative">
-                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                       <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                      </svg>
-                  </div>
-                  <input id="datepicker-range-start" name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Fecha de inicio *">
-                </div>
-                <span class="mx-4 text-gray-500">to</span>
-                <div class="relative">
-                  <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                       <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                      </svg>
-                  </div>
-                  <input id="datepicker-range-end" name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Fecha de final *">
-              </div>
-              </div>
-                          <p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> Username already taken!</p>
-          </div>
-      
-          <button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Guardar Sprint</button>
-          <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Cancelar</button>
-      
-        </form>
-      </div>
-     
-    </div>
-   
   </div>
 
+  <div
+    id="accordion-arrow-icon-body-2"
+    class="active"
+    aria-labelledby="accordion-arrow-icon-heading-2"
+  >
+    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <form class="max-w-sm mx-auto" [formGroup]="sprintsForm" (ngSubmit)="onSubmit()">
+        <div class="mb-5">
+          <label
+            for="username-success"
+            class="block mb-2 text-sm font-medium text-green-700 dark:text-green-500"
+            >Nombre del sprint *</label
+          >
+          <input
+          formControlName="nombre"
+            type="text"
+            id="username-success"
+            class="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-green-500"
+            placeholder="ingresa el nombre del sprint"
+          />
+          <p class="mt-2 text-sm text-green-600 dark:text-green-500">
+            <span class="font-medium">Alright!</span> Username available!
+          </p>
+        </div>
+        <div>
+          <label
+            for="username-error"
+            class="block mb-2 text-sm font-medium text-red-700 dark:text-red-500"
+            >Periodo de sprint</label
+          >
+          
+
+          <div
+            id="date-range-picker"
+            date-rangepicker
+            class="flex items-center"
+          >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                  />
+                </svg>
+              </div>
+              <input
+              formControlName="fechaInicio"
+                id="datepicker-range-start"
+                name="start"
+                type="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Fecha de inicio *"
+              />
+            </div>
+            <span class="mx-4 text-gray-500">to</span>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                  />
+                </svg>
+              </div>
+              <input
+              formControlName="fechaFinal"
+                id="datepicker-range-end"
+                name="end"
+                type="text"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Fecha de final *"
+              />
+            </div>
+          </div>
+          <p class="mt-2 text-sm text-red-600 dark:text-red-500">
+            <span class="font-medium">Oops!</span> Username already taken!
+          </p>
+        </div>
+
+        <button
+          type="submit"
+          class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        >
+          Guardar Sprint
+        </button>
+        <button
+          type="button"
+          class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          Cancelar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

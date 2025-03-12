@@ -13,6 +13,9 @@ import { toast, NgxSonnerToaster } from 'ngx-sonner';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaProducBacklogComponent } from './lista-produc-backlog/lista-produc-backlog.component';
+import { ListaItemsComponent } from './lista-items/lista-items.component';
+import { SeleccionarSprintComponent } from './seleccionar-sprint/seleccionar-sprint.component';
+import { FormsModule } from '@angular/forms'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +26,15 @@ import { ListaProducBacklogComponent } from './lista-produc-backlog/lista-produc
     ListaSprintsComponent,
     CrearItemComponent,
     CrearSprintComponent,
-    ListaProducBacklogComponent
+    ListaProducBacklogComponent,
+    ListaItemsComponent,
+    SeleccionarSprintComponent
   ],
   imports: [
     BrowserModule,
     NgxSonnerToaster,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],

@@ -10,15 +10,19 @@ import { AgregarComponent } from './agregar/agregar.component';
 import { ListaSprintsComponent } from './lista-sprints/lista-sprints.component';
 import { CrearItemComponent } from './crear-item/crear-item.component';
 import { CrearSprintComponent } from './crear-sprint/crear-sprint.component';
+import { ListaProducBacklogComponent } from './lista-produc-backlog/lista-produc-backlog.component';
+import { SeleccionarSprintComponent } from './seleccionar-sprint/seleccionar-sprint.component';
 
 const routes: Routes = [
   { path: 'header', component: HeaderComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'agregar', component: AgregarComponent },
-  { path: 'lista-sprints', component: ListaSprintsComponent },
-  { path: 'crear-item', component: CrearItemComponent },
-  { path: 'crear-sprint', component: CrearSprintComponent },
+  { path: 'lista-sprints/:projecto', component: ListaSprintsComponent },
+  { path: 'crear-item/:proyecto', component: CrearItemComponent },
+  { path: 'crear-sprint/:proyecto', component: CrearSprintComponent },
+  { path: 'seleccionar-sprint/:id/:proyecto', component: SeleccionarSprintComponent },
+  { path: 'lista-product-backlog/:proyecto', component: ListaProducBacklogComponent },
   { path: '', redirectTo: '/menu', pathMatch: 'full' } // Ruta por defecto
 ];
 

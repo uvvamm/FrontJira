@@ -6,16 +6,18 @@ import { ProyectosService } from '../ProyectoService/proyectos.service';
   selector: 'app-agregar',
   standalone: false,
   templateUrl: './agregar.component.html',
-  styleUrl: './agregar.component.scss'
+  styleUrl: './agregar.component.scss',
 })
 export class AgregarComponent {
-
   projectForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private projectService: ProyectosService) {
+  constructor(
+    private fb: FormBuilder,
+    private projectService: ProyectosService
+  ) {
     this.projectForm = this.fb.group({
       nombre: ['', Validators.required],
-      descripcion: ['', Validators.required]
+      descripcion: ['', Validators.required],
     });
   }
 
@@ -23,11 +25,11 @@ export class AgregarComponent {
     if (this.projectForm.valid) {
       const formData = this.projectForm.value;
       this.projectService.createProject(formData).subscribe(
-        response => {
+        (response) => {
           console.log('Respuesta del servidor:', response);
           alert('Proyecto creado con éxito');
         },
-        error => {
+        (error) => {
           console.error('Error al crear el proyecto:', error);
           alert('Ocurrió un error al crear el proyecto');
         }
@@ -37,5 +39,4 @@ export class AgregarComponent {
       alert('Por favor, completa todos los campos.');
     }
   }
-
 }
