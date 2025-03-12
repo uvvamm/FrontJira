@@ -54,7 +54,13 @@
             class="bg-gray-50 border border-gray-500 text-gray-900 dark:text-gray-400 placeholder-gray-700 dark:placeholder-gray-500 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-500"
             placeholder="ingresa el nombre del sprint"
           />
-          <div *ngIf="sprintsForm.get('nombre')?.invalid && sprintsForm.get('nombre')?.touched" class="text-red-500 text-sm mt-1">
+          <div
+            *ngIf="
+              sprintsForm.get('nombre')?.invalid &&
+              sprintsForm.get('nombre')?.touched
+            "
+            class="text-red-500 text-sm mt-1"
+          >
             El nombre del sprint es obligatorio.
           </div>
         </div>
@@ -122,13 +128,28 @@
               />
             </div>
           </div>
-          <div *ngIf="sprintsForm.get('fechaInicio')?.invalid && sprintsForm.get('fechaInicio')?.touched" class="text-red-500 text-sm mt-1">
+          <div
+            *ngIf="
+              sprintsForm.get('fechaInicio')?.invalid &&
+              sprintsForm.get('fechaInicio')?.touched
+            "
+            class="text-red-500 text-sm mt-1"
+          >
             La fecha de inicio es obligatoria.
           </div>
-          <div *ngIf="sprintsForm.get('fechaFinal')?.invalid && sprintsForm.get('fechaFinal')?.touched" class="text-red-500 text-sm mt-1">
+          <div
+            *ngIf="
+              sprintsForm.get('fechaFinal')?.invalid &&
+              sprintsForm.get('fechaFinal')?.touched
+            "
+            class="text-red-500 text-sm mt-1"
+          >
             La fecha de final es obligatoria.
           </div>
-          <div *ngIf="sprintsForm.errors?.['dateRangeInvalid']" class="text-red-500 text-sm mt-1">
+          <div
+            *ngIf="sprintsForm.errors?.['dateRangeInvalid']"
+            class="text-red-500 text-sm mt-1"
+          >
             La fecha de final debe ser posterior a la fecha de inicio.
           </div>
         </div>
@@ -141,7 +162,7 @@
             Guardar Sprint
           </button>
           <button
-            type="button" 
+            type="button"
             (click)="goHome()"
             class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
           >

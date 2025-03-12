@@ -9,14 +9,24 @@
       <button
         type="button"
         class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-        data-accordion-target="#accordion-collapse-body-1"
-        aria-expanded="true"
-        aria-controls="accordion-collapse-body-1"
+        (click)="goBack()"
       >
         <span>Product Backlog de {{ this.projectName }}</span>
-        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"/>
-</svg>
+        <svg
+          class="w-6 h-6 text-gray-800 dark:text-black"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 16 16"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"
+          />
+        </svg>
       </button>
     </h2>
     <div
@@ -74,13 +84,19 @@
 
                   <div class="flex justify-between items-center">
                     <div>
-                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                      <h3
+                        class="text-lg font-semibold text-gray-900 dark:text-white"
+                      >
                         {{ backlog.titulo }}
                       </h3>
-                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                      <p
+                        class="text-base font-normal text-gray-500 dark:text-gray-400"
+                      >
                         {{ backlog.descripcion }}
                       </p>
-                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                      <p
+                        class="text-base font-normal text-gray-500 dark:text-gray-400"
+                      >
                         {{ backlog.sprint }}
                       </p>
                     </div>
@@ -92,11 +108,8 @@
                       Asignar a sprint
                     </button>
                   </div>
-                  
                 </li>
               </ol>
-
-              
             </div>
           </div>
         </div>
@@ -105,19 +118,13 @@
           <h2 id="accordion-nested-collapse-heading-1">
             <button
               class="flex items-center justify-between w-full p-5 rounded-t-xl font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-              
             >
               <span>Items asignados a Sprints</span>
-              
-              
-              
             </button>
           </h2>
-          <p
-                    class="text-base font-normal text-gray-500 dark:text-gray-400"
-                  >
-                    Items que ya han sido asignados a sprints especificos
-                  </p>
+          <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+            Items que ya han sido asignados a sprints especificos
+          </p>
           <div
             id="accordion-nested-collapse-body-1"
             class="active"
@@ -150,12 +157,8 @@
                   >
                     {{ item.sprint }}
                   </p>
-
-                 
                 </li>
               </ol>
-
-              
             </div>
           </div>
         </div>

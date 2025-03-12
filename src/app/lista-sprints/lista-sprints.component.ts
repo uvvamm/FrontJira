@@ -46,4 +46,9 @@ export class ListaSprintsComponent implements OnInit {
   agregarSprint(Proyecto: string): void {
     this.router.navigate(['/crear-sprint', Proyecto]);
   }
+  //pagina anterior
+  goBack(){
+    window.history.back();
+    
+  }
 }

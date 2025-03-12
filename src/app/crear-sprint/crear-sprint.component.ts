@@ -36,11 +36,12 @@ export class CrearSprintComponent implements OnInit {
       this.projectService.createSprint(formData).subscribe(
         (response) => {
           console.log('Respuesta del servidor:', response);
-          alert('Proyecto creado con éxito');
+          alert('sprint creado con éxito');
+          this.goHome();
         },
         (error) => {
-          console.error('Error al crear el proyecto:', error);
-          alert('Ocurrió un error al crear el proyecto');
+          console.error('Error al crear el sprint:', error);
+          alert('Ocurrió un error al crear el sprint');
         }
       );
     } else {

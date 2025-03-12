@@ -62,4 +62,7 @@ export class ListaProducBacklogComponent implements OnInit {
   goHome(): void {
     this.router.navigate(['/']);
   }
+  goBack(): void {
+    window.history.back();
+  }
 }
